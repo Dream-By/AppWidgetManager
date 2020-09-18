@@ -13,18 +13,6 @@ import java.util.GregorianCalendar;
  */
 public class CatDaysAppWidget extends AppWidgetProvider {
 
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
-                                int appWidgetId) {
-
-        CharSequence widgetText = context.getString(R.string.appwidget_text);
-        // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.cat_days_app_widget);
-        views.setTextViewText(R.id.appwidget_text, widgetText);
-
-        // Instruct the widget manager to update the widget
-        appWidgetManager.updateAppWidget(appWidgetId, views);
-    }
-
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         // There may be multiple widgets active, so update all of them
@@ -32,7 +20,7 @@ public class CatDaysAppWidget extends AppWidgetProvider {
         //    updateAppWidget(context, appWidgetManager, appWidgetId);
         //}
         final int N = appWidgetIds.length;
-        for (int i = 0; i<N; i++) {
+        for (int i = 0; i < N; i++) {
             updateAppWidget(context, appWidgetManager, appWidgetIds[i]);
         }
     }
@@ -47,7 +35,7 @@ public class CatDaysAppWidget extends AppWidgetProvider {
         // Enter relevant functionality for when the last widget is disabled
     }
 
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,int[] appWidgetId) {
+    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,int appWidgetId) {
 
         Calendar catDay = new GregorianCalendar(2016, 2, 1);
         Calendar today = Calendar.getInstance();
