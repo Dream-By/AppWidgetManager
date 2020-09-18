@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">AppWidgetManager</string>
+    <string name="app_name">World Cats Day</string>
+    <string name="hello_wold">Hello World!</string>
+    <string name="action_settings">Settings</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
 </resources>
